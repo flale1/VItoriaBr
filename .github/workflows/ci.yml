@@ -30,7 +30,7 @@ jobs:
         run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
       # Includes xtask's repository_passes_policy, the asset-policy check.
       - name: Tests
-        run: cargo test --workspace --locked
+        run: cargo test --workspace --locked --no-fail-fast
 
   # The crates that do not need Windows (the shader translator, formats,
   # PE reader, cache, config, title formats and the asset-policy check),
